@@ -9,10 +9,7 @@ export default function Hero() {
         loop
         playsInline
       >
-        <source
-          src="https://abdelkrimdjerrah.com/videos/hero-vid.mp4"
-          type="video/mp4"
-        />
+        <source src="videos/hero-vid.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Overlay */}
