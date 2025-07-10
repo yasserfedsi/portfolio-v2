@@ -6,7 +6,7 @@ export default function VerticalSidebar() {
   return (
     <div className="fixed left-0 top-0 h-screen w-16 bg-[rgba(11,11,11,1)] flex flex-col items-center justify-between py-6 z-50">
       <div className="text-white text-2xl font-bold">
-        <a href="/">Y</a>
+        <Link href="/">Y</Link>
       </div>
 
       <div className="flex flex-col items-center space-y-4">
@@ -17,7 +17,7 @@ export default function VerticalSidebar() {
         >
           contact
         </Link>
-        
+
         {/* Divider */}
         <div className="w-8 h-px bg-white" />
 
