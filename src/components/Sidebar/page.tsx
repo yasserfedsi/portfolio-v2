@@ -17,18 +17,19 @@ export default function VerticalSidebar() {
         >
           contact
         </Link>
+        
         {/* Divider */}
         <div className="w-8 h-px bg-white" />
 
         {/* Social Icons */}
         <div className="flex flex-col items-center space-y-4 text-white text-lg">
-          <Link href="https://github.com" target="_blank">
+          <Link href="https://github.com/yasserfedsi" target="_blank">
             <FaGithub className="hover:text-gray-400 transition-colors" />
           </Link>
-          <Link href="https://instagram.com" target="_blank">
+          <Link href="https://instagram.com/yasser.fds" target="_blank">
             <FaInstagram className="hover:text-gray-400 transition-colors" />
           </Link>
-          <Link href="https://linkedin.com" target="_blank">
+          <Link href="https://linkedin.com/in/yasser-fedsi" target="_blank">
             <FaLinkedin className="hover:text-gray-400 transition-colors" />
           </Link>
         </div>
