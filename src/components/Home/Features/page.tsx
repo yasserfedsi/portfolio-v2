@@ -20,6 +20,8 @@ export default function Features() {
             src="/images/fast.png"
             alt="Fast"
             className="mx-auto mb-4 w-20 h-20 object-contain transition-all duration-300 group-hover:scale-110"
+            width={80}
+            height={80}
           />
           <h3 className="text-xl font-bold mb-2 text-white">Fast</h3>
           <p className="text-sm text-zinc-300">
@@ -33,6 +35,8 @@ export default function Features() {
             src="/images/responsive.png"
             alt="Responsive"
             className="mx-auto mb-4 w-20 h-20 object-contain transition-all duration-300 group-hover:scale-110"
+            width={80}
+            height={80}
           />
           <h3 className="text-xl font-bold mb-2 text-white">Responsive</h3>
           <p className="text-sm text-zinc-300">
@@ -46,6 +50,8 @@ export default function Features() {
             src="/images/intuitive.png"
             alt="Intuitive"
             className="mx-auto mb-4 w-20 h-20 object-contain transition-all duration-300 group-hover:scale-110"
+            width={80}
+            height={80}
           />
           <h3 className="text-xl font-bold mb-2 text-white">Intuitive</h3>
           <p className="text-sm text-zinc-300">
@@ -59,6 +65,8 @@ export default function Features() {
             src="/images/dynamic.png"
             alt="Dynamic"
             className="mx-auto mb-4 w-20 h-20 object-contain transition-all duration-300 group-hover:scale-110"
+            width={80}
+            height={80}
           />
           <h3 className="text-xl font-bold mb-2 text-white">Dynamic</h3>
           <p className="text-sm text-zinc-300">
