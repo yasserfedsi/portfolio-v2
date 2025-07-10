@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import { MoveUp } from "lucide-react";
 
@@ -25,9 +25,6 @@ export default function VerticalSidebar() {
         <div className="flex flex-col items-center space-y-4 text-white text-lg">
           <Link href="https://github.com/yasserfedsi" target="_blank">
             <FaGithub className="hover:text-gray-400 transition-colors" />
-          </Link>
-          <Link href="https://instagram.com/yasser.fds" target="_blank">
-            <FaInstagram className="hover:text-gray-400 transition-colors" />
           </Link>
           <Link href="https://linkedin.com/in/yasser-fedsi" target="_blank">
             <FaLinkedin className="hover:text-gray-400 transition-colors" />
