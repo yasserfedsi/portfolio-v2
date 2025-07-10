@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Features() {
   return (
     <section className="w-full h-screen flex flex-col justify-center items-center gap-8 md:gap-12 px-4 md:px-20 snap-start overflow-hidden">
@@ -14,7 +16,7 @@ export default function Features() {
       {/* Boxes Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full cursor-default">
         <div className="group rounded-2xl border border-zinc-700 p-6 text-center transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-transparent hover:bg-zinc-800/60">
-          <img
+          <Image
             src="/images/fast.png"
             alt="Fast"
             className="mx-auto mb-4 w-20 h-20 object-contain transition-all duration-300 group-hover:scale-110"
@@ -27,7 +29,7 @@ export default function Features() {
         </div>
 
         <div className="group rounded-2xl border border-zinc-700 p-6 text-center transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-transparent hover:bg-zinc-800/60">
-          <img
+          <Image
             src="/images/responsive.png"
             alt="Responsive"
             className="mx-auto mb-4 w-20 h-20 object-contain transition-all duration-300 group-hover:scale-110"
@@ -40,7 +42,7 @@ export default function Features() {
         </div>
 
         <div className="group rounded-2xl border border-zinc-700 p-6 text-center transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-transparent hover:bg-zinc-800/60">
-          <img
+          <Image
             src="/images/intuitive.png"
             alt="Intuitive"
             className="mx-auto mb-4 w-20 h-20 object-contain transition-all duration-300 group-hover:scale-110"
@@ -53,7 +55,7 @@ export default function Features() {
         </div>
 
         <div className="group rounded-2xl border border-zinc-700 p-6 text-center transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-transparent hover:bg-zinc-800/60">
-          <img
+          <Image
             src="/images/dynamic.png"
             alt="Dynamic"
             className="mx-auto mb-4 w-20 h-20 object-contain transition-all duration-300 group-hover:scale-110"
