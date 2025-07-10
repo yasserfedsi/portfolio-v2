@@ -1,25 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { imagesData } from "@/images/imagesData";
+import { projects } from "@/data";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "ARC 4",
-      description: "Modern dashboard system for real-time tracking.",
-      image: imagesData.projectBackground,
-      stack: ["Svelte", "Sveltekit", "MariaDB", "Docker", "TailwindCSS"],
-      url: "https://example.com/arc4",
-    },
-    {
-      title: "Stock Manager",
-      description: "Inventory tracking platform with Firebase support.",
-      image: imagesData.projectBackground,
-      stack: ["NextJS", "PSQL", "TailwindCSS", "Firebase", "Axios"],
-      url: "https://example.com/stock-manager",
-    },
-  ];
-
   return (
     <section className="w-full h-screen flex flex-col justify-center items-center gap-8 md:gap-12 px-4 md:px-20 snap-start overflow-hidden">
       {/* Heading */}
