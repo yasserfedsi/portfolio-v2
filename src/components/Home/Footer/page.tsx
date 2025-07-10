@@ -1,6 +1,3 @@
-import { imagesData } from "@/images/imagesData";
-import Image from "next/image";
-
 export default function Footer() {
   return (
     <section className="w-full h-screen flex flex-col justify-center items-center gap-8 md:gap-12 px-4 md:px-20 snap-start overflow-hidden">
