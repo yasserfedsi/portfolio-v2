@@ -3,7 +3,7 @@ export default function Footer() {
     <section className="w-full h-screen flex flex-col justify-center items-center gap-8 md:gap-12 px-4 md:px-20 snap-start overflow-hidden">
       <div className="flex flex-col gap-1 md:gap-7 items-center">
         <div className="font-extrabold text-[5rem] md:text-[7rem] leading-[4rem]">
-          Let's work
+          Let&apos;s work
         </div>
         <div className="font-extrabold text-[5rem] text-silver md:text-[7rem] leading-[4rem]">
           together
