@@ -1,10 +1,5 @@
-import type { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Yasser Fedsi",
-  description: "Yasser Fedsi is a software developer based in Algeria.",
-};
+import { Toaster } from "react-hot-toast";
 
 export default function RootLayout({
   children,
@@ -14,8 +9,11 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
+        <title>Yasser Fedsi - Portfolio</title>
+        <meta name="description" content="A Full-Stack developer and a Junior Product Designer" />
         <body>{children}</body>
       </html>
+      <Toaster />
     </>
   );
 }

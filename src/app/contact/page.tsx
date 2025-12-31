@@ -11,8 +11,45 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import { useState, useRef } from "react";
+import toast from "react-hot-toast";
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = formRef.current;
+    if (!form) {
+      setLoading(false);
+      return;
+    }
+
+    const formData = new FormData(form);
+    const toastId = toast.loading("Sending message...");
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      toast.success("Message sent successfully!", { id: toastId });
+      form.reset(); // ✅ safe now
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message. Try again.", { id: toastId });
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <section className="relative min-h-screen bg-[#0b0b0b] text-white overflow-hidden flex items-center justify-center">
       {/* SVG BACKGROUND */}
@@ -60,15 +97,16 @@ export default function ContactPage() {
             <CardHeader>
               <CardTitle className="text-white">Contact Me</CardTitle>
               <CardDescription className="text-zinc-400">
-                Fill out the form and I’ll get back to you shortly.
+                Fill out the form and I&apos;ll get back to you shortly.
               </CardDescription>
             </CardHeader>
 
             <CardContent>
-              <form className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} method="POST" className="space-y-6">
                 <div className="space-y-2">
                   <label className="text-sm text-zinc-400">Name</label>
                   <Input
+                    name="name"
                     placeholder="Your name"
                     className="bg-transparent border-zinc-600 text-white"
                   />
@@ -78,6 +116,7 @@ export default function ContactPage() {
                   <label className="text-sm text-zinc-400">Email</label>
                   <Input
                     type="email"
+                    name="email"
                     placeholder="you@email.com"
                     className="bg-transparent border-zinc-600 text-white"
                   />
@@ -87,6 +126,7 @@ export default function ContactPage() {
                   <label className="text-sm text-zinc-400">Message</label>
                   <Textarea
                     rows={5}
+                    name="message"
                     placeholder="Tell me about your project..."
                     className="bg-transparent border-zinc-600 text-white resize-none"
                   />
@@ -96,7 +136,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full rounded-full border border-white bg-transparent text-white hover:bg-white hover:text-black transition"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
