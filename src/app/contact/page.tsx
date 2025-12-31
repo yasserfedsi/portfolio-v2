@@ -106,6 +106,10 @@ export default function ContactPage() {
 
       {/* SVG WAVE */}
       <SvgDividerBottom />
+
+      <footer className="absolute bottom-6 text-xs text-zinc-500 tracking-widest">
+        © {new Date().getFullYear()} YASSER FEDSI. All rights reserved.
+      </footer>
     </section>
   );
 }
