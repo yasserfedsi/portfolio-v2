@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import VerticalSidebar from "@/components/Home/Sidebar/page";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <VerticalSidebar />
       <html lang="en">
         <body>{children}</body>
       </html>
