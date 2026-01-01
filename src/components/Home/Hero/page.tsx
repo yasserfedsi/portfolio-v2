@@ -18,6 +18,12 @@ export default function Hero() {
     return () => clearInterval(interval)
   }, [])
 
+  const handleDown = () => {
+    document.getElementById("features")?.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
+
   return (
     <section className="relative h-screen md:ml-16 flex items-center justify-center">
       <video
@@ -60,6 +66,23 @@ export default function Hero() {
         >
           Explore My Ingenuity
         </motion.p>
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce w-8 h-8 opacity-80 z-30 cursor-pointer" onClick={handleDown}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          className="w-full h-full"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+        >
+          <path
+            d="M16 5 C16 10 12 14 8 14 C4 14 0 10 0 5 C0 5 0 -5 0 -5 C0 -10 4 -14 8 -14 C12 -14 16 -10 16 -5 C16 -5 16 5 16 5z"
+            transform="translate(8, 16)"
+          />
+          <path d="M16 9.4 C16 11.2 16 14 16 14" strokeLinecap="round" />
+        </svg>
       </div>
     </section>
   );

@@ -11,8 +11,15 @@ interface ProjectsProp {
 
 export const projects: ProjectsProp[] = [
   {
+    title: "Mindexa",
+    description: "Mindexa is a library of Courses, Exercises , Exams and several other documents for all university students.",
+    image: staticData.projectBackground,
+    stack: ["Next.js", "Tailwindcss", "MongoDB", "Flask", "Python"],
+    url: "https://tresoruni.tech/",
+  },
+  {
     title: "ARC 4",
-    description: "Modern dashboard system for real-time tracking.",
+    description: "Modern registration platform for Algerian Robot Cup.",
     image: staticData.projectBackground,
     stack: ["Svelte", "Sveltekit", "MariaDB", "Docker", "TailwindCSS"],
     url: "https://arc.celec.codes/",
@@ -76,7 +83,7 @@ export const features = [
     title: "Intuitive",
     description:
       "Clear UX patterns that make interaction effortless and natural.",
-    src: "/images/intuitive.png",
+    src: "/images/intuitive-t.png",
     alt: "Intuitive interfaces",
   },
   {

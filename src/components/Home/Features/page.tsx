@@ -6,7 +6,7 @@ import { features } from "@/lib/data";
 
 export default function Features() {
     return (
-        <section className="relative min-h-screen bg-[#0b0b0b] text-white overflow-hidden flex flex-col justify-center">
+        <section className="relative min-h-screen bg-[#0b0b0b] text-white overflow-hidden flex flex-col justify-center" id="features">
             {/* TOP SVG SEPARATOR */}
             <SvgDividerTop />
 
@@ -35,7 +35,7 @@ export default function Features() {
                 </motion.div>
 
                 {/* GRID */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1400px] mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-350 mx-auto">
                     {features.map((feature, index) => (
                         <motion.div
                             key={feature.title}
