@@ -137,7 +137,7 @@ export const experiences = [
     company: "CELEC Club",
     duration: "Sep 2025 - Present",
     description:
-      "",
+      "Overseeing all digital and technological initiatives within the organization to drive innovation and operational efficiency.",
   },
 ];
 
