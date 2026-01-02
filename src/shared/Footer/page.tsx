@@ -73,18 +73,6 @@ export default function Footer() {
       {/* Bottom Divider */}
       <div className="absolute bottom-6 text-xs text-zinc-500 tracking-widest">
         © {new Date().getFullYear()} YASSER FEDSI. All rights reserved.
-        <div className="flex space-x-4 mt-2 items-center justify-center">
-          <Link href={linkTo.github} target="_blank">
-            <Button className="cursor-pointer hover:text-white">
-              <Github />
-            </Button>
-          </Link>
-          <Link href={linkTo.linkedIn} target="_blank">
-            <Button className="cursor-pointer hover:text-blue-500">
-              <Linkedin />
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );

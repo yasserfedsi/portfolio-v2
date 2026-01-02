@@ -1,20 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MoveUp } from "lucide-react";
+import { Github, Linkedin, MoveUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { hoverScale } from "@/lib/animations";
 
 const socials = [
   {
     href: "https://github.com/yasserfedsi",
-    icon: FaGithub,
+    icon: Github,
     label: "GitHub",
   },
   {
     href: "https://linkedin.com/in/yasser-fedsi",
-    icon: FaLinkedin,
+    icon: Linkedin,
     label: "LinkedIn",
   },
 ];
