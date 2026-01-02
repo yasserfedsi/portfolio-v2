@@ -2,7 +2,7 @@
 
 import FeatureCard from "./cards";
 import { motion } from "framer-motion";
-import { features } from "@/lib/data";
+import { features } from "@/utils/data";
 
 export default function Features() {
     return (
