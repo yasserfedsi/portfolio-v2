@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, MoveUp } from "lucide-react";
+import { FileUser, Github, Linkedin, MoveUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { hoverScale } from "@/lib/animations";
+import { BsBehance } from "react-icons/bs";
+import { AiOutlineBehance, AiOutlineMedium } from "react-icons/ai";
 
 const socials = [
   {
@@ -16,6 +18,21 @@ const socials = [
     icon: Linkedin,
     label: "LinkedIn",
   },
+  {
+    href: "https://behance.net/fedsiyasser",
+    icon: AiOutlineBehance,
+    label: "Behance",
+  },
+  {
+    href: "https://medium.com/@fedsi.yasser",
+    icon: AiOutlineMedium,
+    label: "Medium",
+  },
+  {
+    href: "/cv.pdf",
+    icon: FileUser,
+    label: "CV"
+  }
 ];
 
 export default function VerticalSidebar() {
@@ -47,7 +64,7 @@ export default function VerticalSidebar() {
             aria-label={label}
             className="text-white text-lg"
           >
-            <Icon />
+            <Icon className="w-auto h-5" />
           </motion.a>
         ))}
       </div>
