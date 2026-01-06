@@ -122,15 +122,33 @@ export const experiences = [
     role: "Programming with Python",
     company: "BrainerX",
     duration: "2023",
-    description:
-      "Programming with python certificate by BrainerX",
+    description: "Programming with python certificate by BrainerX",
   },
   {
     role: "Secondary School Graduation (BAC)",
     company: "",
     duration: "2024",
     description:
-      "",
+      "The last year at the secondary school got my certificate with a grade of 60.2% and now i'm at USTHB as a second year Process Engineering.",
+  },
+  {
+    role: "BS, Science & Technology student",
+    company: "USTHB",
+    duration: "2024-2025",
+    description: "My first year at USTHB as a Science & Technology student.",
+  },
+  {
+    role: "Member of IT Department",
+    company: "CELEC Club",
+    duration: "2024 - Present",
+    description:
+      "Member of IT department charged of making various projects in both Frontend and Backend.",
+  },
+  {
+    role: "BS, Process Engineering",
+    company: "USTHB",
+    duration: "2025 - 2027",
+    description: "Bachelor of Science in Process Engineering.",
   },
   {
     role: "Head of IT Department",
