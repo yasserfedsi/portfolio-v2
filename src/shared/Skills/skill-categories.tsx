@@ -1,4 +1,4 @@
-import { staticData } from "../static/static";
+import { staticData } from "../../static/static";
 import type { StaticImageData } from "next/image";
 import type { ReactElement } from "react";
 import {

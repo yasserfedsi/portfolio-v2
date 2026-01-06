@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { skillCategories } from "@/utils/skill-categories"
+import { skillCategories } from "@/shared/Skills/skill-categories"
 
 export default function Skills() {
     return (
