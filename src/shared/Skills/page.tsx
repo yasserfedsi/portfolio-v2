@@ -130,17 +130,16 @@ export default function Skills() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
+                    className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto cursor-default"
                 >
                     {[
-                        { label: "Years Experience", value: "3+" },
+                        { label: "Years Experience", value: "5+" },
                         { label: "Projects Completed", value: "50+" },
                         { label: "Technologies", value: "19+" },
-                        { label: "Happy Clients", value: "30+" }
                     ].map((stat, index) => (
                         <div
                             key={stat.label}
-                            className="bg-[#111111]/70 border border-zinc-700 rounded-lg p-6 text-center backdrop-blur-sm hover:border-cyan-400/50 transition-colors duration-300"
+                            className="bg-[#111111]/70 border border-zinc-700 rounded-lg p-6 text-center backdrop-blur-sm hover:border-gray-400/50 transition-colors duration-300"
                         >
                             <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                                 {stat.value}
