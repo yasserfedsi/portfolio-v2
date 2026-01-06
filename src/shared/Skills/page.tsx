@@ -2,44 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiTailwindcss, SiNodedotjs, SiNpm, SiVite, SiReact, SiExpress, SiPostgresql, SiMongodb, SiPython, SiFirebase, SiPnpm, SiDocker, SiNginx, SiBun, SiPostman } from "react-icons/si";
-
-const skillCategories = [
-    {
-        category: "Frontend",
-        skills: [
-            { title: "HTML", icon: <SiHtml5 size={40} className="text-orange-500" />, level: 95 },
-            { title: "CSS", icon: <SiCss3 size={40} className="text-blue-500" />, level: 85 },
-            { title: "JavaScript", icon: <SiJavascript size={40} className="text-yellow-400" />, level: 92 },
-            { title: "TypeScript", icon: <SiTypescript size={40} className="text-blue-600" />, level: 88 },
-            { title: "React", icon: <SiReact size={40} className="text-cyan-400" />, level: 90 },
-            { title: "Tailwind CSS", icon: <SiTailwindcss size={40} className="text-cyan-400" />, level: 93 },
-        ]
-    },
-    {
-        category: "Backend",
-        skills: [
-            { title: "Node.js", icon: <SiNodedotjs size={40} className="text-green-500" />, level: 87 },
-            { title: "Express", icon: <SiExpress size={40} className="text-white" />, level: 85 },
-            { title: "Python", icon: <SiPython size={40} className="text-yellow-500" />, level: 80 },
-            { title: "PostgreSQL", icon: <SiPostgresql size={40} className="text-blue-700" />, level: 82 },
-            { title: "MongoDB", icon: <SiMongodb size={40} className="text-green-600" />, level: 84 },
-            { title: "Firebase", icon: <SiFirebase size={40} className="text-yellow-400" />, level: 86 },
-        ]
-    },
-    {
-        category: "Tools & DevOps",
-        skills: [
-            { title: "Vite", icon: <SiVite size={40} className="text-purple-500" />, level: 88 },
-            { title: "Docker", icon: <SiDocker size={40} className="text-blue-500" />, level: 70 },
-            { title: "Nginx", icon: <SiNginx size={40} className="text-green-500" />, level: 70 },
-            { title: "NPM", icon: <SiNpm size={40} className="text-red-600" />, level: 90 },
-            { title: "PNPM", icon: <SiPnpm size={40} className="text-violet-500" />, level: 85 },
-            { title: "Bun", icon: <SiBun size={40} className="text-red-400" />, level: 80 },
-            { title: "Postman", icon: <SiPostman size={40} className="text-orange-400" />, level: 88 },
-        ]
-    }
-];
+import { skillCategories } from "@/utils/skill-categories"
 
 export default function Skills() {
     return (
@@ -103,18 +66,6 @@ export default function Skills() {
                                                 <CardTitle className="text-white text-base md:text-lg mb-3">
                                                     {skill.title}
                                                 </CardTitle>
-
-                                                {/* Progress Bar */}
-                                                <div className="w-full bg-zinc-800 rounded-full h-2 overflow-hidden">
-                                                    <motion.div
-                                                        initial={{ width: 0 }}
-                                                        whileInView={{ width: `${skill.level}%` }}
-                                                        viewport={{ once: true }}
-                                                        transition={{ duration: 1, delay: index * 0.1 + 0.3 }}
-                                                        className="h-full bg-white rounded-full"
-                                                    />
-                                                </div>
-                                                <p className="text-xs text-zinc-500 mt-2">{skill.level}%</p>
                                             </CardContent>
                                         </Card>
                                     </motion.div>
