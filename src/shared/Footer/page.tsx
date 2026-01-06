@@ -1,16 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function Footer() {
-  const linkTo = {
-    linkedIn: "https://linkedin.com/in/yasser-fedsi",
-    github: "https://github.com/yasserfedsi"
-  }
-
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-[#0b0b0b] text-white">
       {/* SVG Wave Background */}

@@ -1,6 +1,6 @@
 "use client";
 
-import FeatureCard from "./cards";
+import FeatureCard from "./features-card";
 import { motion } from "framer-motion";
 import { features } from "@/utils/data";
 
