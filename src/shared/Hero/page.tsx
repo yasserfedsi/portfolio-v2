@@ -19,7 +19,7 @@ export default function Hero() {
   }, [])
 
   const handleDown = () => {
-    document.getElementById("features")?.scrollIntoView({
+    document.getElementById("about-me")?.scrollIntoView({
       behavior: "smooth"
     })
   }

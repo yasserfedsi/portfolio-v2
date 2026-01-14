@@ -6,7 +6,7 @@ import { AboutCard } from "./about-card";
 
 export default function About() {
     return (
-        <section className="relative min-h-screen bg-[#0b0b0b] text-white overflow-hidden flex items-center">
+        <section className="relative min-h-screen bg-[#0b0b0b] text-white overflow-hidden flex items-center" id="about-me">
             {/* SVG Background */}
             <SvgBackground />
 
