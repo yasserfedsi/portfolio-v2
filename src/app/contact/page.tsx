@@ -1,5 +1,7 @@
 "use client";
 
+import { ContactFormValues, contactSchema } from "@/schema";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,35 +15,39 @@ import {
 } from "@/components/ui/card";
 import { useState, useRef } from "react";
 import toast from "react-hot-toast";
+import { useForm } from "react-hook-form"
+import axios from "axios";
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
 
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormValues>({
+    resolver: zodResolver(contactSchema),
+  });
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  async function onSubmit(data: ContactFormValues) {
     setLoading(true);
-
-    const form = formRef.current;
-    if (!form) {
-      setLoading(false);
-      return;
-    }
-
-    const formData = new FormData(form);
     const toastId = toast.loading("Sending message...");
 
     try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        body: formData,
-      });
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
 
-      if (!res.ok) throw new Error("Request failed");
+      const res = await axios.post("/api/send", formData)
+
+      if (!res.data) {
+        throw new Error("Request Failed")
+      }
 
       toast.success("Message sent successfully!", { id: toastId });
-      form.reset(); // ✅ safe now
+      reset();
     } catch (error) {
       console.error(error);
       toast.error("Failed to send message. Try again.", { id: toastId });
@@ -56,7 +62,7 @@ export default function ContactPage() {
       <SvgBackground />
 
       {/* CONTENT */}
-      <div className="relative z-10 w-full max-w-6xl px-6 md:px-20 py-24 grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="relative z-10 w-full max-w-6xl px-6 md:px-20 py-24 grid grid-cols-1 md:grid-cols-2 gap-16 contact-page-grid">
         {/* LEFT TEXT */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -102,39 +108,54 @@ export default function ContactPage() {
             </CardHeader>
 
             <CardContent>
-              <form ref={formRef} onSubmit={handleSubmit} method="POST" className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="space-y-2">
                   <label className="text-sm text-zinc-400">Name</label>
                   <Input
-                    name="name"
+                    {...register("name")}
                     placeholder="Your name"
                     className="bg-transparent border-zinc-600 text-white"
                   />
+                  {errors.name && (
+                    <p className="text-sm text-red-400">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm text-zinc-400">Email</label>
                   <Input
                     type="email"
-                    name="email"
+                    {...register("email")}
                     placeholder="you@email.com"
                     className="bg-transparent border-zinc-600 text-white"
                   />
+                  {errors.email && (
+                    <p className="text-sm text-red-400">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm text-zinc-400">Message</label>
                   <Textarea
                     rows={5}
-                    name="message"
+                    {...register("message")}
                     placeholder="Tell me about your project..."
                     className="bg-transparent border-zinc-600 text-white resize-none"
                   />
+                  {errors.message && (
+                    <p className="text-sm text-red-400">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full rounded-full border border-white bg-transparent text-white hover:bg-white hover:text-black transition"
+                  className="w-full rounded-full border border-white bg-transparent text-white hover:bg-white hover:text-black transition cursor-pointer"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </Button>
