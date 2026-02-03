@@ -33,7 +33,7 @@ export default function Hero() {
         loop
         playsInline
       >
-        <source src="/videos/hero-vid.mp4" type="video/mp4" />
+        <source src="/videos/programming.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/70" />
