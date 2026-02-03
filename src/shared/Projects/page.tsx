@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from "react-icons/fa";
-import { projects } from "@/utils/data";
+import { projects } from ".";
 import Image from "next/image";
 
 export default function Projects() {

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FaBriefcase } from "react-icons/fa";
-import { experiences } from "@/utils/data";
+import { experiences } from ".";
 
 
 export default function Experience() {
@@ -81,7 +81,7 @@ export default function Experience() {
                                             </div>
                                         </>
                                     )}
-                                    
+
                                     {/* Timeline Dot */}
                                     <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-400 w-4 h-4 rounded-full z-20 ring-4 ring-[#0b0b0b]"></div>
                                 </div>

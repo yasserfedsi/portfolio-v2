@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { FaQuoteLeft, FaQuoteRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { testimonials } from "@/utils/data";
+import { testimonials } from ".";
 
 export default function Testimonials() {
     const [currentIndex, setCurrentIndex] = useState(0);
