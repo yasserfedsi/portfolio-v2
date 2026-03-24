@@ -1,62 +1,91 @@
-export const experiences = [
+type ExperienceType =
+  | "FullTime"
+  | "PartTime"
+  | "Intern"
+  | "Education"
+  | "Certification"
+  | "Extracurricular";
+
+interface IExperience {
+  role: string;
+  company: string;
+  duration: string | number;
+  type: ExperienceType;
+  description: string;
+}
+
+export const experiences: Array<IExperience> = [
   {
     role: "Intermediate School Graduation",
     company: "",
     duration: "2021",
-    description:
-      "The last year at the middle school got my certificate with a grade of 73.75% and now i'm at the third and last year at secondary school.",
+    type: "Education",
+    description: "Completed middle school with a grade of 73.75%.",
   },
   {
-    role: "Basic Concepts of ComputerScience Certificate",
+    role: "Basic Concepts of Computer Science Certificate",
     company: "",
     duration: "2021",
+    type: "Certification",
     description:
-      "Basic knowledge about computer science such as variables and loops.",
+      "Learned basic computer science concepts such as variables and loops.",
   },
   {
     role: "PlayCanvas Experienced Certificate",
     company: "PlayCanvas",
     duration: "2022 - Present",
+    type: "Certification",
     description:
-      "Making and developing chase.io that hit +1020 views and +400 player every day",
+      "Developing chase.io which reached 1000+ views and 400+ daily players.",
   },
   {
     role: "Programming with Python",
     company: "BrainerX",
     duration: "2023",
-    description: "Programming with python certificate by BrainerX",
+    type: "Certification",
+    description: "Python programming certification.",
   },
   {
     role: "Secondary School Graduation (BAC)",
     company: "",
     duration: "2024",
-    description:
-      "The last year at the secondary school got my certificate with a grade of 60.2% and now i'm at USTHB as a second year Process Engineering.",
+    type: "Education",
+    description: "Graduated with 60.2% and started studies at USTHB.",
   },
   {
-    role: "BS, Science & Technology student",
+    role: "BS, Science & Technology Student",
     company: "USTHB",
-    duration: "2024-2025",
-    description: "My first year at USTHB as a Science & Technology student.",
+    duration: "2024 - 2025",
+    type: "Education",
+    description: "First year in Science & Technology.",
   },
   {
     role: "Member of IT Department",
     company: "CELEC Club",
     duration: "2024 - Present",
-    description:
-      "Member of IT department charged of making various projects in both Frontend and Backend.",
+    type: "Extracurricular",
+    description: "Worked on frontend and backend projects.",
   },
   {
     role: "BS, Process Engineering",
     company: "USTHB",
     duration: "2025 - 2027",
-    description: "Bachelor of Science in Process Engineering.",
+    type: "Education",
+    description: "Bachelor’s degree in Process Engineering.",
   },
   {
     role: "Head of IT Department",
     company: "CELEC Club",
     duration: "Sep 2025 - Present",
+    type: "Extracurricular",
+    description: "Leading IT initiatives and managing technical projects.",
+  },
+  {
+    role: "HSE Engineer",
+    company: "Naftal SPA",
+    duration: "March 2026 - Present",
+    type: "Intern",
     description:
-      "Overseeing all digital and technological initiatives within the organization to drive innovation and operational efficiency.",
+      "Ensuring compliance with health, safety, and environmental regulations by conducting risk assessments, implementing safety procedures, and promoting a safe working environment across operations.",
   },
 ];

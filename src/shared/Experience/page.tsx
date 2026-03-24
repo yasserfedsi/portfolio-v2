@@ -57,6 +57,7 @@ export default function Experience() {
                                                     </div>
                                                     <p className="text-zinc-400 mb-1 font-medium">{exp.company}</p>
                                                     <p className="text-sm text-zinc-500 mb-3">{exp.duration}</p>
+                                                    <p className="text-sm text-zinc-500 mb-3">{exp.type}</p>
                                                     <p className="text-zinc-300 text-sm leading-relaxed">{exp.description}</p>
                                                 </div>
                                             </div>
@@ -76,6 +77,7 @@ export default function Experience() {
                                                     </div>
                                                     <p className="text-zinc-400 mb-1 font-medium">{exp.company}</p>
                                                     <p className="text-sm text-zinc-500 mb-3">{exp.duration}</p>
+                                                    <p className="text-sm text-zinc-500 mb-3">{exp.type}</p>
                                                     <p className="text-zinc-300 text-sm leading-relaxed">{exp.description}</p>
                                                 </div>
                                             </div>
