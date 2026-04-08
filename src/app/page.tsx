@@ -1,4 +1,4 @@
-import VerticalSidebar from "@/Layouts/VerticalSidebar/page";
+import VerticalSidebar from "@/shared/components/VerticalSidebar/page";
 import Hero from "@/shared/Hero/page";
 import Features from "@/shared/Features/page";
 import Projects from "@/shared/Projects/page";
