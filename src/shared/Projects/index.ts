@@ -11,12 +11,20 @@ interface ProjectsProp {
 
 export const projects: ProjectsProp[] = [
   {
+    title: "Khwaris",
+    description:
+      "Khwaris is an Algiers-based software & AI company crafting scalable products, intelligent systems, and data-driven platforms for ambitious teams worldwide.",
+    image: staticData.khwaris,
+    stack: ["Next.js", "CSS", "ShadcnUI", "Claude"],
+    url: "https://khwaris.vercel.app/",
+  },
+  {
     title: "Mindexa",
     description:
       "Mindexa is a library of Courses, Exercises , Exams and several other documents for all university students.",
     image: staticData.projectBackground,
     stack: ["Next.js", "Tailwindcss", "MongoDB", "Flask", "Python"],
-    url: "https://tresoruni.tech/",
+    url: "https://mindexa-edu.vercel.app/",
   },
   {
     title: "Mathlib",
@@ -70,5 +78,12 @@ export const projects: ProjectsProp[] = [
     image: staticData.projectBackground,
     stack: ["Next.js", "TailwindCss", "Docker", "Nginx"],
     url: "https://www.celec.codes/",
+  },
+  {
+    title: "ARC Backend System",
+    description: "The official backend system for Algerian Robot Cup competition",
+    image: staticData.projectBackground,
+    stack: ["Node.js", "Express.js", "PrismaORM", "PostgreSQL", "Docker, Nginx"],
+    url: "#",
   },
 ];
