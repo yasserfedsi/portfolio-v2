@@ -4,8 +4,7 @@ import Link from "next/link";
 import { FileUser, Github, Linkedin, MoveUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { hoverScale } from "@/lib/animations";
-import { BsBehance } from "react-icons/bs";
-import { AiOutlineBehance, AiOutlineMedium } from "react-icons/ai";
+import { AiOutlineMedium } from "react-icons/ai";
 
 const socials = [
   {
@@ -17,11 +16,6 @@ const socials = [
     href: "https://linkedin.com/in/yasser-fedsi",
     icon: Linkedin,
     label: "LinkedIn",
-  },
-  {
-    href: "https://behance.net/fedsiyasser",
-    icon: AiOutlineBehance,
-    label: "Behance",
   },
   {
     href: "https://medium.com/@fedsi.yasser",
@@ -39,7 +33,7 @@ export default function VerticalSidebar() {
   return (
     <aside className="fixed left-0 top-0 hidden md:flex h-screen w-16 flex-col items-center justify-between py-6 bg-[#0b0b0b] z-50">
       <Link href="/" className="text-white text-2xl font-bold">
-        Y
+        <img src="/logo.png" alt="logo" />
       </Link>
 
       <div className="flex flex-col items-center gap-8">
