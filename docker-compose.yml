@@ -6,5 +6,5 @@ services:
       dockerfile: Dockerfile
     env_file: .env
     ports:
-      - "${INTERNAL_PORT}:${INTERNAL_PORT}"
+      - "${EXTERNAL_PORT}:${INTERNAL_PORT}"
     restart: unless-stopped
