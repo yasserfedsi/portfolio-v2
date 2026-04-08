@@ -86,6 +86,14 @@ export const experiences: Array<IExperience> = [
     duration: "March 2026 - Present",
     type: "Intern",
     description:
-      "Ensuring compliance with health, safety, and environmental regulations by conducting risk assessments, implementing safety procedures, and promoting a safe working environment across operations.",
+      "Topic: Treatment of liquid effluents using hydrocarbon separators.",
+  },
+  {
+    role: "Founder & CTO",
+    company: "Khwaris",
+    duration: "March 2026 - Present",
+    type: "FullTime",
+    description:
+      "Khwaris is a boutique AI and software engineering solutions.",
   },
 ];
