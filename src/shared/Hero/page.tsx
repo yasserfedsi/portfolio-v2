@@ -4,19 +4,21 @@ import { motion, useReducedMotion, Variants } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 import { useEffect, useState } from "react";
 
-const titles = ["Full Stack Developer", "Junior Product Designer"]
+const titles: string[] = ["Full Stack Developer", "Backend Developer", "Project Manager"]
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
+    if (reduceMotion) return;
+
     const interval = setInterval(() => {
-      setIndex((prev) => (prev === 0 ? 1 : 0))
-    }, 2500) // 2.5s
+      setIndex((prev) => (prev + 1) % titles.length)
+    }, 2500)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [reduceMotion])
 
   const handleDown = () => {
     document.getElementById("about-me")?.scrollIntoView({
